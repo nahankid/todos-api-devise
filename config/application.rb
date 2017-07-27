@@ -24,6 +24,16 @@ module TodosApiDevise
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
+    config.generators do |g|
+      g.helper false
+      g.assets false
+      g.test_framework :test_unit, spec: true, fixture: false
+      g.fixture_replacement :factory_girl
+      # g.test_framework nil # to skip test framework
+      # g.view_specs false
+      # g.helper_specs false
+      # g.controller_specs false
+    end
 
     # Only loads a smaller set of middleware suitable for API only apps.
     # Middleware like session, flash, cookies can be added back manually.
